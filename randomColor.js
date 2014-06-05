@@ -241,7 +241,7 @@
 		if (options.id) {
 			var id, id_length;
 			id = parseInt(options.id, 32);
-			id = Math.ceil(Math.pow((42 + id) / 2, 3));
+			id = String(Math.ceil(Math.pow((42 + id)/2, 3))).split('').reverse().join('');
 
 			var end = range[1] - range[0] || 1;
 			var range_diff = Math.floor(range[1] + 1 - range[0]);
